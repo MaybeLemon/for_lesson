@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='for_viewer.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='buttons.css')}}">
+    <title>Календарь</title>
+</head>
+<body>
+    <header>
+        {% for item in data['nav'] %}
+             <a href="{{ item.url }}" class="buttons_header"><p class="header">{{ item.name }}</p></a>
+        {% endfor %}
+    </header>
+
+    <div class="container">
+        <div class="element">
+            <form method="POST">
+                <label>Дата:</label>
+                <input type="date" name="date" id="date" class="user_inputs">
+                <label>Тип предмета:</label>
+                <select id="sub_type" name="sub_type" class="user_inputs">
+                    <option value="nontype">Не указано</option>
+                    <option value="Практические занятия">Практические занятия</option>
+                    <option value="Лабораторные работы">Лабораторные работы</option>
+                    <option value="Лекции">Лекции</option>
+                </select>
+                <button type="submit" class="buttons_request buttons_main" name="sort" id="sort">Подтвердить</button>
+            </form>
+        </div>
+        <div class="element">
+            <form method="POST">
+                <label>Название предмета:</label>
+                <select id="sub_name" name="sub_name" class="user_inputs">
+                    {% for x in data['unique_names'] %}
+                        <option value="{{ x }}">{{ x }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="buttons_request buttons_main" name ='sub_info' id="sub_info">Подтвердить</button>
+            </form>
+        </div>
+        <div class="element">
+            <form method="POST">
+                <label>Выберите преподавателя:</label>
+                <select id="teacher_info" name="teacher_info" class="user_inputs">
+                    {% for x in data['unique_teacher'] %}
+                        <option value="{{ x }}">{{ x }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="buttons_request buttons_main" name ='teacher_sub' id="teacher_sub">Подтвердить</button>
+            </form>
+        </div>
+    </div>
+{#    <div class="some_label">#}
+{#        <p>{{data['teacher_info']}}{{data['sub_info']}}</p>#}
+{#    </div>#}
+
+    <div class="for_table">
+        <table id="lessonTable">
+            <tr id="main_tr">
+                <th>Название</th>
+                <th>Дата</th>
+                <th>Время</th>
+                <th>Преподаватель</th>
+                <th>Тип предмета</th>
+            </tr>
+            {% for lesson in data['lessons'] %}
+                <tr>
+                    <td id="name_sub">{{ lesson['Название'] }}</td>
+                    <td class="incenter">{{ lesson['День'] }}/{{ lesson['Месяц'] }}/{{ lesson['Год'] }}</td>
+                    <td id="time" class="incenter">{{ lesson['Начало'] }} - {{ lesson['Конец'] }}</td>
+                    <td>{{ lesson['Преподаватель'] }}</td>
+                    <td>{{ lesson['Тип предмета'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+</html>

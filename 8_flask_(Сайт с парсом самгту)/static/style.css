@@ -1,0 +1,166 @@
+:root {
+    --back-color: #38024d;
+    --back-header-color: #5a057e;
+    --text-color: #eadfdf;
+    --text-btn-color: #ffffff;
+    --text-family: Arial;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*background-color: var(--back-color);*/
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(149deg, rgb(84, 0, 35) 0%, rgb(43, 0, 103) 42%, rgb(103, 0, 79) 72%, rgba(115,53,134,1) 100%);;
+    background-attachment: fixed;
+    animation: gradient 7s infinite linear;
+    background-size: 400%;
+}
+
+header {
+    display: flex;
+    /*background-color: var(--back-header-color);*/
+    /*border-bottom: 1px solid;*/
+    /*border-color: black;*/
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: relative;
+}
+
+.header {
+    font-family: var(--text-family);
+    font-size: 18px;
+
+}
+
+/*header a {*/
+/*    padding: 10px 7px 13px 7px;*/
+/*    margin: 0 0 10px 10px;*/
+/*    font-family: Roboto;*/
+/*    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);*/
+/*    !*background-color: var(--back-header-color);*!*/
+/*    text-align: center;*/
+/*    width: 100px;*/
+/*    color: inherit;*/
+/*    text-decoration: none;*/
+/*    border: 1px solid transparent;*/
+/*    background-color: rgba(0, 255, 225, 0.24);*/
+/*    border-radius: 0 0 15px 15px;*/
+
+/*    !*border-right: 1px solid;*!*/
+/*    !*border-color: black;*!*/
+/*}*/
+
+
+/*a:hover {*/
+/*    !*background-color: #410359;*!*/
+/*    !*color: #410359;*!*/
+/*}*/
+
+p {
+    font-family: var(--text-family);
+
+    font-size: 32px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+a p {
+    margin: 0;
+}
+
+.input-field {
+    width: 100%;
+    height: 20px;
+    /*color: black;*/
+    font-family: var(--text-family);
+    /*font-size: 15px;*/
+    /*padding: 10px;*/
+    /*padding-left: 5px;*/
+    /*border-radius: 5px;*/
+    /*border: 2px solid #ccc;*/
+    box-sizing: border-box;
+    color: var(--text-btn-color);
+    margin-right: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    padding: 0 10px 0 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    transition: 0.4s;
+}
+
+.input-field:hover {
+    box-shadow: 0 0 20px rgba(4, 255, 226, 0.8);
+}
+
+#main_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 50%;
+}
+
+.boxes {
+    margin: 40px;
+    margin-top: 30px;
+    padding: 30px;
+    width: 300px; /* Задаем фиксированную ширину */
+    height: 400px;
+    /*background-color: rgba(183, 0, 255, 0.22);*/
+    border: 1px transparent;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px 0 var(--shadow-header-btn-color);
+    background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgba(187,24,148,1) 72%, rgba(115,53,134,1) 100%);
+    animation: gradient 7s infinite linear;
+    background-size: 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.element {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.otvet {
+    display: block;
+    text-align: center;
+    margin: 0;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+#kostyl {
+    box-shadow: none;
+    background-color: unset;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='buttons.css')}}">
+    <style>
+        body {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        {% for item in data['nav'] %}
+             <a href="{{ item.url }}" class="buttons_header"><p class="header">{{ item.name }}</p></a>
+        {% endfor %}
+    </header>
+    <div id="main_div">
+        <form action="/" method="post">
+            <div class="signin boxes">
+                <div class="container">
+                    <div class="element">
+                        <p>Авторизация через<br>логин и пароль</p>
+                    </div>
+                    <div class="element">
+                        <input id='login' name="login" class="input-field" placeholder="Логин" autocomplete="on">
+                    </div>
+                    <div class="element">
+                        <input id='passwd' name="passwd" type="password" class="input-field" placeholder="Пароль">
+                    </div>
+                    <div class="element">
+                        <button type="submit" id='btn' name="btn" class="buttons_main">Авторизоваться</button>
+                    </div>
+                    <div class="element">
+                        <p class="otvet">{{ data['otvet_auth'] }}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

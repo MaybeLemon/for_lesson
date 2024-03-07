@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Files</title>
+    <meta charset="utf-8">
+    <title>Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='buttons.css')}}">
+</head>
+<body>
+    <header>
+        {% for item in data['nav'] %}
+             <a href="{{ item.url }}" class="buttons_header"><p class="header">{{ item.name }}</p></a>
+        {% endfor %}
+    </header>
+    <div class="container">
+        <p>Список доступных JSON файлов</p>
+        <ul>
+            {% for number in data['numbers'] %}
+                <li class="element">
+                    <a href="{{ url_for('json_page', number=number) }}">
+                        <button class="buttons_main" type="button">
+                            Открыть JSON {{ number }}
+                        </button>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+table {
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 5px;
+    /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+    box-shadow: 0 0 10px rgba(255, 0, 195, 0.4);
+    color: var(--text-color);
+    font-family: var(--text-family);
+    font-size: 16px;
+    vertical-align: top;
+    background-color: rgba(0,0,0,0.3);
+}
+
+#main_tr {
+    /*background: rgba(255, 0, 183, 0.4);*/
+    background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgba(187,24,148,1) 72%, rgb(32, 98, 161) 100%);
+    animation: gradient 7s infinite linear;
+    background-size: 200%;
+}
+
+.for_table {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    margin-bottom: 30px;
+}
+
+.element {
+    display: flex;
+    width: 610px;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgba(187,24,148,1) 72%, rgba(115,53,134,1) 100%);
+    animation: gradient 7s infinite linear;
+    background-size: 400%;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.incenter {
+    text-align: center;
+}
+
+label {
+    color: var(--text-btn-color);
+    font-family: var(--text-family);
+    font-size: 16px;
+    text-align: center;
+}
+
+.user_inputs, option {
+    color: var(--text-btn-color);
+    margin-right: 10px;
+    font-family: var(--text-family);
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    padding: 2px 6px 0 6px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    transition: 0.4s;
+}
+
+.user_inputs:hover {
+    box-shadow: 0 0 20px rgba(4, 255, 226, 0.8);
+}
+
+option {
+    background-color: rgb(125, 3, 138);
+}
+
+.exc {
+    margin-top: 10px;
+}
+
+select {
+    max-width: 150px;
+}
+
+#name_sub {
+    max-width: 600px;
+}
+#time {
+    min-width: 100px;
+}

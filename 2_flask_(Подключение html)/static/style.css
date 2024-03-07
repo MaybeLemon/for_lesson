@@ -1,0 +1,12 @@
+html, body {
+    height: calc(100% - 20px);
+
+}
+
+.text {
+    margin: 0;
+    font-size: 50px;
+    line-height: 500px;
+    vertical-align: middle;
+    text-align: center;
+}

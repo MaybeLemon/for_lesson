@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>error</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='buttons.css')}}">
+    <style>
+        body {
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        {% for item in data['nav'] %}
+             <a href="{{ item.url }}" class="buttons_header"><p class="header">{{ item.name }}</p></a>
+        {% endfor %}
+    </header>
+    <p><br>Произошла ошибка</p>
+</body>
+</html>

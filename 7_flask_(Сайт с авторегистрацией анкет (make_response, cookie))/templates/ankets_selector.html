@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Files</title>
+    <meta charset="utf-8">
+    <title>Selector</title>
+    <meta http-equiv="refresh" content="name=example">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='buttons.css')}}">
+</head>
+<body>
+    <header>
+        {% for item in data['nav'] %}
+             <a href="{{ item.url }}" class="buttons_header"><p class="header">{{ item.name }}</p></a>
+        {% endfor %}
+    </header>
+    <div class="container">
+        <div class="element">
+            <div class="buttons_container">
+                <form action="/selector" method="POST">
+                {% for x in data['ankets'] %}
+                    <button class="buttons_main" type="submit" id="{{ x[0] }}" name="id" value="{{ x[0] }}">{{ x[1] }}</button><br>
+                {% endfor %}
+            </form>
+            <p>{{ data['otvet_ankets'] }}</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
