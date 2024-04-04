@@ -1,0 +1,93 @@
+body {
+    background-color: #38024d;
+    min-height: calc(100vh - 40px);
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a057e;
+    color: #fff;
+    height: 60px;
+}
+
+.header > a {
+    width: 150px;
+    color: #00d9ff;
+    transition: 0.3s;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.header > a:hover {
+    color: #0097b0;
+}
+
+.header > a > img {
+    margin-top: 5px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    background-color: #5a057e;
+    color: #fff;
+    border-radius: 15px;
+    padding: 40px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.75);
+    min-width: 40%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container > h2 > a {
+    color: #00d9ff;
+    transition: 0.3s;
+}
+
+.container > h2 > a:hover {
+    color: #0097b0;
+}
+
+.container > input {
+    padding: 3px 10px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    background-color: #33014d;
+    outline: none;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.34);
+    transition: 0.3s;
+}
+
+.container > input[type=submit] {
+    cursor: pointer;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.container > input[type=submit]:hover {
+    background-color: #3f0080;
+    box-shadow: 0 0 10px #3f0080;
+    transform: translateY(-5px);
+}
+
+.container > input:focus {
+    box-shadow: 0 0 10px #3bd9fd;
+}
